@@ -6,6 +6,7 @@ Group:		Graphical desktop/KDE
 License:	LGPLv2
 URL:		http://www.kde.org/
 Source:		ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
+Patch0:		superkaramba-4.8.4-plasma.patch
 BuildRequires:	kdelibs4-devel >= 5:%{version}
 BuildRequires:	qimageblitz-devel
 BuildRequires:	python-devel
@@ -60,6 +61,7 @@ based on %{name}.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %cmake_kde4
