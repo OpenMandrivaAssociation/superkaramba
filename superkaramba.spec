@@ -1,6 +1,6 @@
 Name:		superkaramba
 Summary:	Put Karamba applets to the desktop with Python
-Version: 4.9.0
+Version: 4.9.2
 Release: 1
 Group:		Graphical desktop/KDE
 License:	LGPLv2
