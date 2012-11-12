@@ -1,0 +1,11 @@
+diff -urN superkaramba-4.8.4-orig/plasma/skappletadaptor.h superkaramba-4.8.4-patched/plasma/skappletadaptor.h
+--- superkaramba-4.8.4-orig/plasma/skappletadaptor.h	2011-08-23 00:26:16.936007052 +1100
++++ superkaramba-4.8.4-patched/plasma/skappletadaptor.h	2012-06-09 17:30:04.794529642 +1100
+@@ -138,6 +138,7 @@
+             //, m_widget(new Plasma::Widget(applet->karamba()))
+             , m_painterenabled(false) {
+             setObjectName( QLatin1String("PlasmaApplet" ));
++            m_applet->setBackgroundHints(Plasma::Applet::DefaultBackground);
+         }
+         virtual ~SkAppletAdaptor() {
+             //delete m_widget;
