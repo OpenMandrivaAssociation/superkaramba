@@ -1,15 +1,15 @@
-Name:		superkaramba
 Summary:	Put Karamba applets to the desktop with Python
+Name:		superkaramba
 Version:	4.11.0
 Release:	1
 Group:		Graphical desktop/KDE
-License:	LGPLv2
-URL:		http://www.kde.org/
+License:	LGPLv2+
+Url:		http://utils.kde.org/projects/superkaramba
 Source:		ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
-Patch0:		superkaramba-4.8.4-plasma.patch
 BuildRequires:	kdelibs4-devel
 BuildRequires:	pkgconfig(qimageblitz)
 BuildRequires:	python-devel
+Obsoletes:	%{name}-devel < 4.11.0
 
 %description
 SuperKaramba is a tool that allows you to easily create interactive
@@ -35,33 +35,17 @@ widgets on your KDE desktop.
 %package -n %{libsuperkaramba}
 Summary:	Runtime library for superkaramba
 Group:		System/Libraries
-URL:		http://utils.kde.org/projects/superkaramba
 
 %description -n %{libsuperkaramba}
-Runtime library for superkaramba
+Runtime library for superkaramba.
 
 %files -n %{libsuperkaramba}
 %{_kde_libdir}/libsuperkaramba.so.%{libsuperkaramba_major}*
-
-#---------------------------------------------
-
-%package devel
-Summary:	Devel stuff for %{name}
-Group:		Development/KDE and Qt
-Requires:	%{libsuperkaramba} = %{EVRD}
-
-%description devel
-This package contains header files needed if you wish to build applications
-based on %{name}.
-
-%files devel
-%{_kde_libdir}/libsuperkaramba.so
 
 #----------------------------------------------------------------------
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 %cmake_kde4
@@ -70,9 +54,14 @@ based on %{name}.
 %install
 %makeinstall_std -C build
 
+# We don't need it because there are no headers anyway
+rm -f %{buildroot}%{_kde_libdir}/libsuperkaramba.so
+
 %changelog
 * Wed Aug 14 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.11.0-1
 - New version 4.11.0
+- Drop merged in upstream plasma patch
+- Drop devel package
 
 * Wed Jul 03 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.10.5-1
 - New version 4.10.5
