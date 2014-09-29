@@ -1,6 +1,6 @@
 Summary:	Put Karamba applets to the desktop with Python
 Name:		superkaramba
-Version:	4.13.3
+Version:	4.14.1
 Release:	1
 Group:		Graphical desktop/KDE
 License:	LGPLv2+
@@ -58,6 +58,9 @@ Runtime library for superkaramba.
 rm -f %{buildroot}%{_kde_libdir}/libsuperkaramba.so
 
 %changelog
+* Mon Sep 29 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.14.1-1
+- New version 4.14.1
+
 * Tue Jul 15 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.13.3-1
 - New version 4.13.3
 
