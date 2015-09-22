@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   superkaramba-15.08.0.tar.xz: fe0c283ce672a64020e6e79678ec8152b9f50043
+sources:
+  superkaramba-15.08.1.tar.xz: 641259c163e59bff7632843347d975793596ba86
