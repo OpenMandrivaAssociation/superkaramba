@@ -4,7 +4,7 @@ Version:	15.08.3
 Release:	1
 License:	LGPLv2+
 Group:		Graphical desktop/KDE
-Url:		http://utils.kde.org/projects/superkaramba
+Url:		https://utils.kde.org/projects/superkaramba
 Source:		http://download.kde.org/stable/applications/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	kdelibs-devel
 BuildRequires:	pkgconfig(python)
