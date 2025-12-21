@@ -6,6 +6,7 @@ License:	LGPLv2+
 Group:		Graphical desktop/KDE
 Url:		https://utils.kde.org/projects/superkaramba
 Source:		http://download.kde.org/stable/applications/%{version}/src/%{name}-%{version}.tar.xz
+BuildRequires:	make
 BuildRequires:	kdelibs-devel
 BuildRequires:	pkgconfig(python)
 BuildRequires:	pkgconfig(qimageblitz) < 5.0.0
